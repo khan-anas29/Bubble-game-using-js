@@ -38,8 +38,6 @@ html,body{
 }
 
 .elem{
-    width: 30%;
-    height: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -47,10 +45,5 @@ html,body{
 .elem .box{
     background-color: #fff;
     border-radius: 10px;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    padding: 10px 20px;
 }
