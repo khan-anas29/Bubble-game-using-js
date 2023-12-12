@@ -1,3 +1,5 @@
+var timer= 60
+
 function makeBubble() {
   // to store bubbles
   var clutter = "";
@@ -12,7 +14,7 @@ function makeBubble() {
   document.querySelector(".panel-bottom").innerHTML = clutter;
 }
 
-var timer= 60
+
 function runTimer() {
     var timer_Interval = setInterval(()=>{
         if (timer>0) {
@@ -27,5 +29,13 @@ function runTimer() {
 
     
 }
+
+function GetHit(){
+    var hitval=Math.floor(Math.random()*10)
+    document.getElementById("hitval").textContent=hitval
+}
+
+
 runTimer()
 makeBubble()
+GetHit()
