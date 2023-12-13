@@ -1,7 +1,7 @@
-var timer= 60
-var score=0;
+var timer = 60
+var score = 0;
 // creating hitcount outside to compare with clicked and hit
-var hitcount=0;
+var hitcount = 0;
 
 
 
@@ -43,16 +43,19 @@ function GetHit(){
 
 
 function increaseScore(){
-    score +=10;
+    score =score+10;
     document.getElementById("scoreCount").textContent=score;
     // this function will increase the score with respect to number of times it is called or run, thus we wont run it by default we will use some condition
 }
 
-document.querySelector(".panel-bottom")
-.addEventListener("click",function(clicked_num_detail){
-    // console.log(clicked_num_detail.target.textContent);
-    var clicked_num= Number(clicked_num_detail.target.textContent)
-    // console.log(clicked_num);
+document.querySelector(".panel-bottom").addEventListener("click",function(details){
+    var clickedNum = Number(details.target.textContent)
+    // console.log(clickedNum);
+    if (clickedNum === hitcount){
+        increaseScore();
+        makeBubble();
+        GetHit();
+    }
 })
 
 runTimer()
